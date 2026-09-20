@@ -6,10 +6,19 @@
 }
 
 .skill-group {
-    background: linear-gradient(135deg, #0a1c2e, #0d2438);
-    border: 1px solid #173a55;
+    background: linear-gradient(135deg, rgba(10, 28, 46, 0.95), rgba(13, 36, 56, 0.95));
+    backdrop-filter: blur(16px);
+    border: 1px solid rgba(23, 58, 85, 0.9);
     border-radius: 20px;
-    padding: 28px;
+    padding: 30px;
+    transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+    box-shadow: 0 6px 30px rgba(0, 0, 0, 0.3);
+}
+
+.skill-group:hover {
+    border-color: rgba(32, 191, 255, 0.4);
+    transform: translateY(-5px);
+    box-shadow: 0 14px 40px rgba(32, 191, 255, 0.15);
 }
 
 .skill-group h4 {
