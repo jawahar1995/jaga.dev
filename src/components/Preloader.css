@@ -1,0 +1,72 @@
+#preloader {
+    position: fixed;
+    inset: 0;
+    background: #060f1a;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 10000;
+    transition: opacity 0.6s ease, visibility 0.6s ease;
+}
+
+#preloader.hide {
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+}
+
+.preloader-inner {
+    text-align: center;
+}
+
+.preloader-logo img {
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+    border: 3px solid #20bfff;
+    box-shadow: 0 0 30px rgba(32, 191, 255, 0.4);
+    animation: preloaderPulse 1.2s ease-in-out infinite;
+}
+
+@keyframes preloaderPulse {
+
+    0%,
+    100% {
+        transform: scale(1);
+        box-shadow: 0 0 20px rgba(32, 191, 255, 0.3);
+    }
+
+    50% {
+        transform: scale(1.08);
+        box-shadow: 0 0 40px rgba(32, 191, 255, 0.6);
+    }
+}
+
+.preloader-bar {
+    width: 200px;
+    height: 3px;
+    background: #0e243a;
+    border-radius: 10px;
+    margin: 20px auto 12px;
+    overflow: hidden;
+}
+
+.preloader-fill {
+    width: 0;
+    height: 100%;
+    background: linear-gradient(90deg, #20bfff, #7c4dff);
+    border-radius: 10px;
+    animation: preloaderLoad 1.6s ease forwards;
+}
+
+@keyframes preloaderLoad {
+    to {
+        width: 100%;
+    }
+}
+
+.preloader-text {
+    color: #4a8aad;
+    font-size: 13px;
+    letter-spacing: 1px;
+}

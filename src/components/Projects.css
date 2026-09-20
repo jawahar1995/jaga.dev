@@ -1,0 +1,103 @@
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 18px;
+}
+
+.project-card {
+    background: linear-gradient(135deg, #0a1c2e, #0c2132);
+    border: 1px solid #173a55;
+    border-radius: 20px;
+    padding: 30px;
+    position: relative;
+    overflow: hidden;
+    transition: border-color 0.3s, transform 0.3s, box-shadow 0.3s;
+    cursor: default;
+}
+
+.project-card:hover {
+    border-color: #2077a8;
+    transform: translateY(-6px);
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.4);
+}
+
+.project-card.featured {
+    border-color: rgba(32, 191, 255, 0.25);
+}
+
+.project-card.featured::before {
+    content: '⭐ Featured';
+    position: absolute;
+    top: 16px;
+    right: 16px;
+    font-size: 10px;
+    font-weight: 800;
+    color: #20bfff;
+    background: rgba(32, 191, 255, 0.1);
+    border: 1px solid rgba(32, 191, 255, 0.3);
+    padding: 3px 10px;
+    border-radius: 50px;
+    letter-spacing: 0.5px;
+}
+
+.project-glow {
+    position: absolute;
+    top: -60px;
+    right: -60px;
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(32, 191, 255, 0.06), transparent 70%);
+    pointer-events: none;
+}
+
+.project-num {
+    font-size: 11px;
+    font-weight: 900;
+    color: #20bfff;
+    letter-spacing: 2px;
+    margin-bottom: 12px;
+}
+
+.project-card h3 {
+    font-size: 18px;
+    margin-bottom: 12px;
+    line-height: 1.35;
+    color: #dff5ff;
+}
+
+.project-card p {
+    color: #8faec5;
+    font-size: 14px;
+    margin-bottom: 18px;
+    line-height: 1.75;
+}
+
+.project-tech {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+    margin-bottom: 12px;
+}
+
+.project-tech span {
+    font-size: 11px;
+    padding: 3px 10px;
+    border-radius: 20px;
+    background: rgba(124, 77, 255, 0.08);
+    border: 1px solid rgba(124, 77, 255, 0.25);
+    color: #b09eff;
+}
+
+.project-company {
+    font-size: 11px;
+    color: #4a6e8a;
+    font-weight: 600;
+    letter-spacing: 0.3px;
+}
+
+@media (max-width: 1000px) {
+    .projects-grid {
+        grid-template-columns: 1fr;
+    }
+}

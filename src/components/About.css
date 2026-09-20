@@ -1,0 +1,93 @@
+.about {
+    display: grid;
+    grid-template-columns: 1.3fr 0.7fr;
+    gap: 24px;
+    align-items: start;
+}
+
+.card {
+    background: linear-gradient(135deg, #0b1e30, #0d2438);
+    border: 1px solid #173a55;
+    border-radius: 20px;
+    padding: 36px;
+    position: relative;
+    overflow: hidden;
+}
+
+.card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 2px;
+    background: linear-gradient(90deg, #20bfff, #7c4dff);
+}
+
+.card-icon {
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+.card p {
+    color: #a9bdd0;
+    margin-bottom: 14px;
+    line-height: 1.8;
+}
+
+.card p:last-child {
+    margin-bottom: 0;
+}
+
+.stats-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 14px;
+}
+
+.stat-card {
+    background: linear-gradient(135deg, #0b1e30, #0d2438);
+    border: 1px solid #173a55;
+    border-radius: 16px;
+    padding: 24px 20px;
+    text-align: center;
+    transition: border-color 0.3s, transform 0.3s;
+    cursor: default;
+}
+
+.stat-card:hover {
+    border-color: #20bfff;
+    transform: translateY(-4px);
+}
+
+.stat-card strong {
+    display: block;
+    font-size: 36px;
+    color: #20bfff;
+    font-family: 'Outfit', sans-serif;
+    line-height: 1;
+}
+
+.stat-card small {
+    font-size: 20px;
+    color: #20bfff;
+}
+
+.stat-card span {
+    display: block;
+    font-size: 12px;
+    color: #6a8ca5;
+    margin-top: 6px;
+}
+
+@media (max-width: 1000px) {
+    .about {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 480px) {
+    .stats-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+}

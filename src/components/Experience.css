@@ -1,0 +1,134 @@
+.timeline {
+    position: relative;
+    padding-left: 40px;
+    max-width: 950px;
+}
+
+.timeline::before {
+    content: '';
+    position: absolute;
+    left: 6px;
+    top: 0;
+    bottom: 0;
+    width: 2px;
+    background: linear-gradient(to bottom, #20bfff, #7c4dff, transparent);
+}
+
+.timeline-item {
+    position: relative;
+    margin-bottom: 32px;
+}
+
+.timeline-dot {
+    position: absolute;
+    left: -46px;
+    top: 28px;
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    background: #20bfff;
+    border: 3px solid #060f1a;
+    box-shadow: 0 0 12px rgba(32, 191, 255, 0.5);
+    transition: transform 0.3s;
+}
+
+.timeline-item:hover .timeline-dot {
+    transform: scale(1.4);
+}
+
+.timeline-date {
+    font-size: 11px;
+    font-weight: 800;
+    color: #20bfff;
+    letter-spacing: 1px;
+    margin-bottom: 8px;
+    text-transform: uppercase;
+}
+
+.timeline-card {
+    background: linear-gradient(135deg, #0b1e30, #0d2438);
+    border: 1px solid #173a55;
+    border-radius: 18px;
+    padding: 28px;
+    transition: border-color 0.3s, transform 0.3s;
+}
+
+.timeline-card:hover {
+    border-color: #2077a8;
+    transform: translateX(4px);
+}
+
+.company-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 12px;
+}
+
+.company-info h3 {
+    font-size: 20px;
+    margin-bottom: 4px;
+}
+
+.company-info h4 {
+    color: #5ecaff;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.badge-current {
+    background: rgba(32, 191, 255, 0.12);
+    border: 1px solid rgba(32, 191, 255, 0.3);
+    color: #20bfff;
+    font-size: 11px;
+    font-weight: 700;
+    padding: 4px 10px;
+    border-radius: 50px;
+}
+
+.timeline-card p {
+    color: #9eb3c7;
+    margin-bottom: 12px;
+    font-size: 14px;
+}
+
+.timeline-card ul {
+    padding-left: 18px;
+    margin-bottom: 14px;
+}
+
+.timeline-card li {
+    color: #9eb3c7;
+    font-size: 14px;
+    margin-bottom: 6px;
+    line-height: 1.6;
+}
+
+.tech-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+}
+
+.tech-tags span {
+    font-size: 11px;
+    padding: 3px 10px;
+    border-radius: 20px;
+    background: rgba(32, 191, 255, 0.07);
+    border: 1px solid rgba(32, 191, 255, 0.18);
+    color: #5ecaff;
+}
+
+@media (max-width: 480px) {
+    .timeline {
+        padding-left: 24px;
+    }
+
+    .timeline::before {
+        left: 4px;
+    }
+
+    .timeline-dot {
+        left: -30px;
+    }
+}

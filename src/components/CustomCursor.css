@@ -1,0 +1,34 @@
+#cursor {
+    width: 12px;
+    height: 12px;
+    background: #20bfff;
+    border-radius: 50%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    pointer-events: none;
+    z-index: 9999;
+    transition: width 0.2s, height 0.2s, background 0.2s;
+    will-change: transform;
+}
+
+#cursor-trail {
+    width: 36px;
+    height: 36px;
+    border: 1.5px solid rgba(32, 191, 255, 0.4);
+    border-radius: 50%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    pointer-events: none;
+    z-index: 9998;
+    will-change: transform;
+}
+
+@media (max-width: 768px) {
+
+    #cursor,
+    #cursor-trail {
+        display: none;
+    }
+}
