@@ -5,264 +5,506 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description"
-    content="Jawahar S - Software Developer | 6+ Years Experience in Angular, React, Next.js, Node.js, TypeScript">
+    content="Jawahar S - Software Developer | 6+ Years | Angular, React, Next.js, Node.js, TypeScript, GraphQL">
   <title>Jawahar S | Software Developer</title>
   <link rel="stylesheet" href="style.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Outfit:wght@400;700;900&display=swap"
+    rel="stylesheet">
 </head>
 
 <body>
-  <header>
+
+  <!-- PRELOADER -->
+  <div id="preloader">
+    <div class="preloader-inner">
+      <div class="preloader-logo"><img src="jk-logo.jpg" alt="JK Logo"></div>
+      <div class="preloader-bar">
+        <div class="preloader-fill"></div>
+      </div>
+      <p class="preloader-text">Loading Portfolio...</p>
+    </div>
+  </div>
+
+  <!-- CURSOR -->
+  <div id="cursor"></div>
+  <div id="cursor-trail"></div>
+
+  <!-- HEADER -->
+  <header id="header">
     <nav class="nav">
-      <a class="logo-img" href="#home"><img src="jk-logo.jpg" alt="JK - Jawahar S Logo"></a>
-      <button id="menu">☰</button>
+      <a class="logo-img" href="#home"><img src="jk-logo.jpg" alt="JK Logo"></a>
+      <button id="menu" aria-label="Toggle Menu">
+        <span></span><span></span><span></span>
+      </button>
       <div id="links">
-        <a href="#home">Home</a><a href="#about">About</a><a href="#skills">Skills</a>
-        <a href="#experience">Experience</a><a href="#projects">Projects</a><a href="#contact">Contact</a>
+        <a href="#home" class="nav-link">Home</a>
+        <a href="#about" class="nav-link">About</a>
+        <a href="#skills" class="nav-link">Skills</a>
+        <a href="#experience" class="nav-link">Experience</a>
+        <a href="#projects" class="nav-link">Projects</a>
+        <a href="#contact" class="nav-link">Contact</a>
       </div>
     </nav>
+    <div class="nav-progress" id="navProgress"></div>
   </header>
 
   <!-- HERO -->
   <section id="home" class="hero">
-    <div class="hero-text">
-      <p class="eyebrow">SOFTWARE DEVELOPER</p>
-      <h1>Hello, I'm <strong>Jawahar S</strong></h1>
-      <h2>Building responsive, scalable &amp; user-friendly web applications.</h2>
-      <p>6+ years of software development experience with strong hands-on knowledge in Angular, React, Next.js,
-        TypeScript, Node.js, GraphQL, Java and modern databases.</p>
-      <div class="chips">
-        <b>HTML</b><b>CSS</b><b>JavaScript</b><b>TypeScript</b><b>Angular</b><b>React</b>
-        <b>Next.js</b><b>Node.js</b><b>GraphQL</b><b>Java</b><b>MySQL</b><b>MongoDB</b><b>Git</b>
+    <canvas id="particles"></canvas>
+    <div class="hero-content">
+      <div class="hero-text">
+        <div class="hero-badge slide-up">
+          <span class="badge-dot"></span> Available for opportunities
+        </div>
+        <p class="eyebrow slide-up delay-1">SOFTWARE DEVELOPER</p>
+        <h1 class="slide-up delay-2">Hello, I'm<br><strong class="gradient-text">Jawahar S</strong></h1>
+        <div class="typewriter-wrap slide-up delay-3">
+          <span>I build </span><span class="typewriter" id="typewriter"></span><span class="cursor-blink">|</span>
+        </div>
+        <p class="hero-desc slide-up delay-4">6+ years crafting scalable web applications across Angular, React,
+          Next.js, TypeScript, GraphQL &amp; Java. From ID card platforms to AI testing agents.</p>
+        <div class="chips slide-up delay-5">
+          <b>Angular</b><b>React</b><b>Next.js</b><b>TypeScript</b><b>GraphQL</b>
+          <b>Node.js</b><b>Java</b><b>AWS S3</b><b>Prisma</b>
+        </div>
+        <div class="actions slide-up delay-6">
+          <a class="btn primary" href="#projects"><span>View Projects</span><svg viewBox="0 0 24 24">
+              <path d="M5 12h14M12 5l7 7-7 7" />
+            </svg></a>
+          <a class="btn ghost" href="mailto:sjaga456@gmail.com"><span>Hire Me</span></a>
+        </div>
+        <div class="contact-mini slide-up delay-7">📱 7397362310 &nbsp;•&nbsp; ✉️ sjaga456@gmail.com &nbsp;•&nbsp; 📍
+          Coimbatore, India</div>
       </div>
-      <div class="actions"><a class="btn primary" href="#projects">View Projects</a><a class="btn"
-          href="mailto:sjaga456@gmail.com">Contact Me</a></div>
-      <div class="contact-mini">📱 7397362310 &nbsp; • &nbsp; ✉️ sjaga456@gmail.com</div>
+      <div class="photo-wrap slide-right delay-2">
+        <div class="photo-ring ring-1"></div>
+        <div class="photo-ring ring-2"></div>
+        <div class="photo-inner"><img src="jawahar-profile.jpg" alt="Jawahar S"></div>
+        <div class="photo-badge badge-exp"><strong>6+</strong><span>Years</span></div>
+        <div class="photo-badge badge-proj"><strong>10+</strong><span>Projects</span></div>
+      </div>
     </div>
-    <div class="photo-wrap"><img src="jawahar-profile.jpg" alt="Jawahar S - Software Developer"></div>
+    <div class="scroll-hint">
+      <span>Scroll</span>
+      <div class="scroll-line"></div>
+    </div>
   </section>
 
   <!-- ABOUT -->
   <section id="about" class="section">
-    <div class="title">
-      <p class="eyebrow">ABOUT ME</p>
-      <h2>Professional Summary</h2>
-    </div>
-    <div class="about">
-      <div class="card">
-        <p>I am a Software Developer with 6+ years of experience building business-focused web applications across
-          multiple domains — ERP systems, ID card management platforms, AI-powered testing agents, and enterprise
-          management dashboards.</p>
-        <p>My expertise spans frontend development with Angular, React, and Next.js; backend development with Node.js,
-          GraphQL, Prisma and Java; cloud storage with AWS S3; and authentication flows including SSO, email/password,
-          and role-based access control (RBAC).</p>
-        <p>I enjoy working on complex, real-world problems and delivering clean, maintainable, production-ready code.
-        </p>
+    <div class="section-inner">
+      <div class="title reveal">
+        <p class="eyebrow">ABOUT ME</p>
+        <h2>Professional <span class="gradient-text">Summary</span></h2>
       </div>
-      <div class="stats">
-        <div><strong>6+</strong><span>Years Experience</span></div>
-        <div><strong>10+</strong><span>Projects Delivered</span></div>
-        <div><strong>Full</strong><span>Stack Development</span></div>
-        <div><strong>5+</strong><span>Companies</span></div>
+      <div class="about">
+        <div class="card reveal-left">
+          <div class="card-icon">👨‍💻</div>
+          <p>I am a Software Developer with <strong>6+ years</strong> of experience building business-focused web
+            applications across multiple domains — ERP systems, ID card management platforms, AI-powered testing agents,
+            and enterprise management dashboards.</p>
+          <p>My expertise spans frontend with <strong>Angular, React &amp; Next.js</strong>; backend with
+            <strong>Node.js, GraphQL, Prisma &amp; Java</strong>; cloud storage via <strong>AWS S3</strong>; and
+            authentication including <strong>SSO, RBAC</strong>, and email/password flows.</p>
+          <p>I enjoy working on complex, real-world problems and delivering clean, maintainable, production-ready code
+            that makes a difference.</p>
+        </div>
+        <div class="stats-grid">
+          <div class="stat-card reveal-up delay-1"><strong class="counter"
+              data-target="6">0</strong><small>+</small><span>Years Experience</span></div>
+          <div class="stat-card reveal-up delay-2"><strong class="counter"
+              data-target="10">0</strong><small>+</small><span>Projects Delivered</span></div>
+          <div class="stat-card reveal-up delay-3"><strong>Full</strong><span>Stack Development</span></div>
+          <div class="stat-card reveal-up delay-4"><strong>5+</strong><span>Companies Worked</span></div>
+        </div>
       </div>
     </div>
   </section>
 
   <!-- SKILLS -->
-  <section id="skills" class="section dark">
-    <div class="title">
-      <p class="eyebrow">TECH STACK</p>
-      <h2>Skills &amp; Technologies</h2>
-    </div>
-    <div class="skills">
-      <div>HTML5<small>Semantic UI</small></div>
-      <div>CSS3<small>Responsive Design</small></div>
-      <div>JavaScript<small>Web Functionality</small></div>
-      <div>TypeScript<small>Type-safe Development</small></div>
-      <div>Angular<small>Component Development</small></div>
-      <div>React<small>Modern Frontend</small></div>
-      <div>Next.js<small>Full-stack React</small></div>
-      <div>Node.js<small>Backend &amp; APIs</small></div>
-      <div>GraphQL<small>API Layer</small></div>
-      <div>Prisma<small>ORM &amp; Database</small></div>
-      <div>Java<small>Enterprise Apps</small></div>
-      <div>MySQL<small>Relational DB</small></div>
-      <div>MongoDB<small>NoSQL Database</small></div>
-      <div>AWS S3<small>Cloud Storage</small></div>
-      <div>TailwindCSS<small>Utility Styling</small></div>
-      <div>Git<small>Version Control</small></div>
+  <section id="skills" class="section dark-section">
+    <div class="section-inner">
+      <div class="title reveal">
+        <p class="eyebrow">TECH STACK</p>
+        <h2>Skills &amp; <span class="gradient-text">Technologies</span></h2>
+      </div>
+      <div class="skills-categories">
+        <div class="skill-group reveal-up delay-1">
+          <h4><span class="skill-icon">🖥️</span> Frontend</h4>
+          <div class="skill-items">
+            <div class="skill-item" data-level="95"><span>HTML5 / CSS3</span>
+              <div class="skill-bar">
+                <div class="skill-fill" data-width="95"></div>
+              </div>
+            </div>
+            <div class="skill-item" data-level="90"><span>JavaScript / TypeScript</span>
+              <div class="skill-bar">
+                <div class="skill-fill" data-width="90"></div>
+              </div>
+            </div>
+            <div class="skill-item" data-level="88"><span>Angular</span>
+              <div class="skill-bar">
+                <div class="skill-fill" data-width="88"></div>
+              </div>
+            </div>
+            <div class="skill-item" data-level="85"><span>React / Next.js</span>
+              <div class="skill-bar">
+                <div class="skill-fill" data-width="85"></div>
+              </div>
+            </div>
+            <div class="skill-item" data-level="78"><span>TailwindCSS / Bootstrap</span>
+              <div class="skill-bar">
+                <div class="skill-fill" data-width="78"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="skill-group reveal-up delay-2">
+          <h4><span class="skill-icon">⚙️</span> Backend &amp; DB</h4>
+          <div class="skill-items">
+            <div class="skill-item"><span>Node.js</span>
+              <div class="skill-bar">
+                <div class="skill-fill" data-width="82"></div>
+              </div>
+            </div>
+            <div class="skill-item"><span>GraphQL / Prisma</span>
+              <div class="skill-bar">
+                <div class="skill-fill" data-width="80"></div>
+              </div>
+            </div>
+            <div class="skill-item"><span>Java</span>
+              <div class="skill-bar">
+                <div class="skill-fill" data-width="75"></div>
+              </div>
+            </div>
+            <div class="skill-item"><span>MySQL / MongoDB</span>
+              <div class="skill-bar">
+                <div class="skill-fill" data-width="78"></div>
+              </div>
+            </div>
+            <div class="skill-item"><span>REST APIs</span>
+              <div class="skill-bar">
+                <div class="skill-fill" data-width="88"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="skill-group reveal-up delay-3">
+          <h4><span class="skill-icon">☁️</span> Tools &amp; Cloud</h4>
+          <div class="skill-items">
+            <div class="skill-item"><span>AWS S3</span>
+              <div class="skill-bar">
+                <div class="skill-fill" data-width="75"></div>
+              </div>
+            </div>
+            <div class="skill-item"><span>Git / GitHub</span>
+              <div class="skill-bar">
+                <div class="skill-fill" data-width="90"></div>
+              </div>
+            </div>
+            <div class="skill-item"><span>SSO / RBAC / Auth</span>
+              <div class="skill-bar">
+                <div class="skill-fill" data-width="82"></div>
+              </div>
+            </div>
+            <div class="skill-item"><span>Keystone CMS</span>
+              <div class="skill-bar">
+                <div class="skill-fill" data-width="78"></div>
+              </div>
+            </div>
+            <div class="skill-item"><span>Stripe Integration</span>
+              <div class="skill-bar">
+                <div class="skill-fill" data-width="70"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="tech-pills reveal">
+        <span>shadcn</span><span>TanStack Query</span><span>Redux</span><span>React Hook Form</span>
+        <span>Yup</span><span>Apollo</span><span>Keystone</span><span>Prisma</span>
+        <span>QR Code</span><span>Stripe</span><span>Jira</span><span>Linear</span>
+      </div>
     </div>
   </section>
 
   <!-- EXPERIENCE -->
   <section id="experience" class="section">
-    <div class="title">
-      <p class="eyebrow">CAREER</p>
-      <h2>Work Experience</h2>
-    </div>
-    <div class="timeline">
+    <div class="section-inner">
+      <div class="title reveal">
+        <p class="eyebrow">CAREER JOURNEY</p>
+        <h2>Work <span class="gradient-text">Experience</span></h2>
+      </div>
+      <div class="timeline">
 
-      <article>
-        <span>May 2025 — June 2026</span>
-        <h3>Software Engineer</h3>
-        <h4>Bluebasket Labs Pvt Ltd</h4>
-        <p>Worked on full-stack development using Next.js, React, TypeScript, GraphQL, Prisma, and Keystone CMS. Key
-          contributions include:</p>
-        <ul>
-          <li>Built and maintained <strong>MyStudyId / SmartID</strong> — a digital ID card and verification platform
-            for colleges and organizations.</li>
-          <li>Developed <strong>GreenLight</strong> — an AI-powered web application testing platform with GitHub, Jira,
-            Slack, and Teams integrations.</li>
-          <li>Contributed to <strong>SmartPipe</strong> — an ERP/member management system with TanStack Query, Redux,
-            and React Hook Form.</li>
-          <li>Worked on <strong>MakerBay ERP</strong> — batch bundle and digital ID card system with QR verification and
-            Stripe integration.</li>
-          <li>Implemented SSO authentication, RBAC (Admin/Owner/Member/Viewer roles), S3 image storage, bulk user
-            uploads, and email flows.</li>
-        </ul>
-      </article>
+        <div class="timeline-item reveal-left">
+          <div class="timeline-dot"></div>
+          <div class="timeline-date">May 2025 — June 2026</div>
+          <div class="timeline-card">
+            <div class="company-header">
+              <div class="company-info">
+                <h3>Software Engineer</h3>
+                <h4>🏢 Bluebasket Labs Pvt Ltd</h4>
+              </div>
+              <span class="badge-current">Recent</span>
+            </div>
+            <p>Full-stack development using Next.js, React, TypeScript, GraphQL, Prisma, and Keystone CMS. Delivered
+              multiple large-scale products.</p>
+            <ul>
+              <li>Built <strong>MyStudyId / SmartID</strong> — Digital ID card &amp; verification platform for colleges
+              </li>
+              <li>Developed <strong>GreenLight</strong> — AI-powered web application testing platform</li>
+              <li>Contributed to <strong>SmartPipe</strong> — ERP &amp; member management system</li>
+              <li>Worked on <strong>MakerBay ERP</strong> — Batch bundle &amp; digital ID card system with Stripe</li>
+              <li>Implemented SSO, RBAC (Admin/Owner/Member/Viewer), S3 image storage &amp; bulk uploads</li>
+            </ul>
+            <div class="tech-tags">
+              <span>Next.js</span><span>React</span><span>TypeScript</span><span>GraphQL</span><span>Prisma</span><span>S3</span><span>SSO</span>
+            </div>
+          </div>
+        </div>
 
-      <article>
-        <span>Previous Role</span>
-        <h3>Software Engineer</h3>
-        <h4>AgileIT Experts Pty Ltd</h4>
-        <p>Worked on frontend development and business application enhancements across multiple projects:</p>
-        <ul>
-          <li>Developed <strong>TreeManager</strong> — a tree/asset management application.</li>
-          <li>Contributed to <strong>Upplft</strong> — a business application with Angular, HTML, CSS and JavaScript.
-          </li>
-          <li>Implemented forms, validations, CRUD operations, API integrations and responsive UI components.</li>
-          <li>Handled Git-based PR workflows and collaborative code reviews.</li>
-        </ul>
-      </article>
+        <div class="timeline-item reveal-right">
+          <div class="timeline-dot"></div>
+          <div class="timeline-date">Previous Role</div>
+          <div class="timeline-card">
+            <div class="company-header">
+              <div class="company-info">
+                <h3>Software Engineer</h3>
+                <h4>🏢 AgileIT Experts Pty Ltd</h4>
+              </div>
+            </div>
+            <p>Frontend development and business application enhancements with Angular, JavaScript, HTML &amp; CSS.</p>
+            <ul>
+              <li>Developed <strong>TreeManager</strong> — Tree/asset management application</li>
+              <li>Contributed to <strong>Upplft</strong> — Business workflow platform</li>
+              <li>Implemented CRUD operations, API integrations, form validations &amp; responsive UI</li>
+            </ul>
+            <div class="tech-tags"><span>Angular</span><span>JavaScript</span><span>HTML/CSS</span><span>REST
+                APIs</span><span>Git</span></div>
+          </div>
+        </div>
 
-      <article>
-        <span>Previous Role</span>
-        <h3>Software Developer</h3>
-        <h4>Letosys Private Limited</h4>
-        <p>Contributed to frontend and application development:</p>
-        <ul>
-          <li>Worked on <strong>Assets Project</strong> — an asset tracking and management system.</li>
-          <li>Built responsive UI components, validations, and API integrations using Angular and JavaScript.</li>
-        </ul>
-      </article>
+        <div class="timeline-item reveal-left">
+          <div class="timeline-dot"></div>
+          <div class="timeline-date">Previous Role</div>
+          <div class="timeline-card">
+            <div class="company-header">
+              <div class="company-info">
+                <h3>Software Developer</h3>
+                <h4>🏢 Letosys Private Limited</h4>
+              </div>
+            </div>
+            <p>Contributed to frontend and application development.</p>
+            <ul>
+              <li>Worked on <strong>Assets Project</strong> — Asset tracking &amp; management system</li>
+              <li>Built responsive UI, validations, and API integrations</li>
+            </ul>
+            <div class="tech-tags"><span>Angular</span><span>JavaScript</span><span>HTML/CSS</span><span>REST
+                APIs</span></div>
+          </div>
+        </div>
 
-      <article>
-        <span>Early Career</span>
-        <h3>Software Developer</h3>
-        <h4>Health Innovation Private Limited</h4>
-        <p>Worked on the <strong>Glosys Project</strong> — a health innovation platform involving Java-based backend and
-          web frontend development, covering forms, validations, and application logic.</p>
-      </article>
+        <div class="timeline-item reveal-right">
+          <div class="timeline-dot"></div>
+          <div class="timeline-date">Early Career</div>
+          <div class="timeline-card">
+            <div class="company-header">
+              <div class="company-info">
+                <h3>Software Developer</h3>
+                <h4>🏢 Health Innovation Private Limited</h4>
+              </div>
+            </div>
+            <p>Built the <strong>Glosys Project</strong> — a health innovation platform with Java backend and web
+              frontend, covering forms, business logic and validations.</p>
+            <div class="tech-tags"><span>Java</span><span>HTML/CSS</span><span>JavaScript</span><span>Backend</span>
+            </div>
+          </div>
+        </div>
 
-      <article>
-        <span>Early Career</span>
-        <h3>Technical Apprentice — Quality Department</h3>
-        <h4>Ford Sparket Manufacturing</h4>
-        <p>Gained foundational experience in quality assurance processes, technical documentation, and production-line
-          workflows within a manufacturing environment.</p>
-      </article>
+        <div class="timeline-item reveal-left">
+          <div class="timeline-dot"></div>
+          <div class="timeline-date">Early Career</div>
+          <div class="timeline-card">
+            <div class="company-header">
+              <div class="company-info">
+                <h3>Technical Apprentice — Quality Department</h3>
+                <h4>🏭 Ford Sparket Manufacturing</h4>
+              </div>
+            </div>
+            <p>Gained foundational experience in quality assurance processes, technical documentation and
+              production-line workflows within a manufacturing environment.</p>
+            <div class="tech-tags"><span>Quality Assurance</span><span>Technical Documentation</span></div>
+          </div>
+        </div>
 
+      </div>
     </div>
   </section>
 
   <!-- PROJECTS -->
-  <section id="projects" class="section dark">
-    <div class="title">
-      <p class="eyebrow">SELECTED WORK</p>
-      <h2>Projects &amp; Contributions</h2>
-    </div>
-    <div class="projects">
+  <section id="projects" class="section dark-section">
+    <div class="section-inner">
+      <div class="title reveal">
+        <p class="eyebrow">SELECTED WORK</p>
+        <h2>Projects &amp; <span class="gradient-text">Contributions</span></h2>
+      </div>
+      <div class="projects-grid">
 
-      <article>
-        <i>01</i>
-        <h3>MyStudyId — Smart Digital ID &amp; Verification Platform</h3>
-        <p>Full-stack digital ID card platform for colleges. Features include SSO authentication, college &amp; user
-          management, ID card template customization, QR code verification, bulk user &amp; profile upload, S3 image
-          storage, and role-based access (Admin/Owner/Member/Viewer).</p>
-        <em>Next.js • React • TypeScript • GraphQL • Prisma • Keystone • S3 • SSO</em>
-      </article>
+        <div class="project-card reveal-up delay-1 featured">
+          <div class="project-num">01</div>
+          <div class="project-glow"></div>
+          <h3>MyStudyId — Smart Digital ID &amp; Verification</h3>
+          <p>Full-stack digital ID card platform for colleges &amp; organizations. SSO authentication, college &amp;
+            user management, ID card template customization, QR verification, bulk uploads, S3 storage, and role-based
+            access control (Admin/Owner/Member/Viewer).</p>
+          <div class="project-tech">
+            <span>Next.js</span><span>React</span><span>TypeScript</span><span>GraphQL</span><span>Prisma</span><span>Keystone</span><span>S3</span><span>SSO</span>
+          </div>
+          <div class="project-company">Bluebasket Labs Pvt Ltd</div>
+        </div>
 
-      <article>
-        <i>02</i>
-        <h3>GreenLight — AI Testing Agent Platform</h3>
-        <p>AI-powered web application testing platform with GitHub branch integration, test discovery, test plans, test
-          execution, browser/video recording, PR-driven testing, AI-assisted error fixing, and integrations with Jira,
-          Slack, Microsoft Teams, and Linear.</p>
-        <em>React • TypeScript • GraphQL • AI Integration • Jira • Slack • MS Teams</em>
-      </article>
+        <div class="project-card reveal-up delay-2 featured">
+          <div class="project-num">02</div>
+          <div class="project-glow"></div>
+          <h3>GreenLight — AI Testing Agent Platform</h3>
+          <p>AI-powered web application testing platform with GitHub branch integration, test discovery, test plans
+            &amp; execution, browser/video recording, PR-driven testing, AI-assisted error fixing, and integrations with
+            Jira, Slack, MS Teams &amp; Linear.</p>
+          <div class="project-tech">
+            <span>React</span><span>TypeScript</span><span>GraphQL</span><span>AI</span><span>Jira</span><span>Slack</span><span>MS
+              Teams</span><span>Linear</span></div>
+          <div class="project-company">Bluebasket Labs Pvt Ltd</div>
+        </div>
 
-      <article>
-        <i>03</i>
-        <h3>SmartPipe — ERP &amp; Organization Management System</h3>
-        <p>Enterprise resource planning and member management system. Includes organization management, member
-          management, authentication, ID card functionality built with modern React ecosystem tools.</p>
-        <em>Next.js • React • TypeScript • TailwindCSS • shadcn • TanStack Query • Redux • GraphQL</em>
-      </article>
+        <div class="project-card reveal-up delay-1">
+          <div class="project-num">03</div>
+          <div class="project-glow"></div>
+          <h3>SmartPipe — ERP &amp; Organization Management</h3>
+          <p>Enterprise resource planning and member management system with organization management, authentication, ID
+            card functionality and a full modern React ecosystem.</p>
+          <div class="project-tech">
+            <span>Next.js</span><span>TypeScript</span><span>TailwindCSS</span><span>shadcn</span><span>TanStack
+              Query</span><span>Redux</span><span>GraphQL</span></div>
+          <div class="project-company">Bluebasket Labs Pvt Ltd</div>
+        </div>
 
-      <article>
-        <i>04</i>
-        <h3>MakerBay ERP — Batch Bundle &amp; Digital ID Card System</h3>
-        <p>ERP system with organization management, employee/visitor ID cards, QR verification, batch bundle management,
-          template management, organization branding, S3 image storage, Stripe integration, and STAFF_MEMBER login
-          flows.</p>
-        <em>Next.js • React • TypeScript • GraphQL • Prisma • Apollo • S3 • Stripe</em>
-      </article>
+        <div class="project-card reveal-up delay-2">
+          <div class="project-num">04</div>
+          <div class="project-glow"></div>
+          <h3>MakerBay ERP — Batch Bundle &amp; Digital ID Cards</h3>
+          <p>ERP system with employee/visitor ID cards, QR verification, batch bundle management, organization branding,
+            S3 image storage, Stripe payment integration, and template position management (CEO/COO etc.).</p>
+          <div class="project-tech">
+            <span>Next.js</span><span>GraphQL</span><span>Prisma</span><span>Apollo</span><span>S3</span><span>Stripe</span>
+          </div>
+          <div class="project-company">Bluebasket Labs Pvt Ltd</div>
+        </div>
 
-      <article>
-        <i>05</i>
-        <h3>TreeManager &amp; Upplft — AgileIT Experts</h3>
-        <p>Worked on TreeManager (asset/tree management) and Upplft (business platform) — implementing responsive UI,
-          CRUD operations, API integrations, form validations, and authentication flows using Angular and JavaScript.
-        </p>
-        <em>Angular • JavaScript • HTML • CSS • REST APIs</em>
-      </article>
+        <div class="project-card reveal-up delay-3">
+          <div class="project-num">05</div>
+          <div class="project-glow"></div>
+          <h3>TreeManager &amp; Upplft</h3>
+          <p>TreeManager (asset/tree management) and Upplft (business workflow platform) — responsive UI, CRUD
+            operations, API integrations, form validations and authentication flows.</p>
+          <div class="project-tech"><span>Angular</span><span>JavaScript</span><span>HTML/CSS</span><span>REST
+              APIs</span><span>Git</span></div>
+          <div class="project-company">AgileIT Experts Pty Ltd</div>
+        </div>
 
-      <article>
-        <i>06</i>
-        <h3>Assets Project — Letosys Private Limited</h3>
-        <p>Asset tracking and management web application with responsive UI, form validations, CRUD operations, and API
-          integrations. Delivered clean, maintainable frontend code with Angular.</p>
-        <em>Angular • JavaScript • HTML • CSS • REST APIs</em>
-      </article>
+        <div class="project-card reveal-up delay-1">
+          <div class="project-num">06</div>
+          <div class="project-glow"></div>
+          <h3>Assets Project — Letosys</h3>
+          <p>Asset tracking and management web application with responsive UI, form validations, CRUD operations and API
+            integrations. Delivered clean, maintainable Angular frontend.</p>
+          <div class="project-tech"><span>Angular</span><span>JavaScript</span><span>HTML/CSS</span><span>REST
+              APIs</span></div>
+          <div class="project-company">Letosys Private Limited</div>
+        </div>
 
-      <article>
-        <i>07</i>
-        <h3>Glosys — Health Innovation Private Limited</h3>
-        <p>Health innovation platform involving Java-based backend services and web frontend. Covered application forms,
-          business logic, validations, and healthcare-related workflow features.</p>
-        <em>Java • Web Frontend • HTML • CSS • JavaScript</em>
-      </article>
+        <div class="project-card reveal-up delay-2">
+          <div class="project-num">07</div>
+          <div class="project-glow"></div>
+          <h3>Glosys — Health Innovation Platform</h3>
+          <p>Health innovation platform with Java-based backend services and web frontend. Application forms, business
+            logic, data validation, and healthcare-focused workflow features.</p>
+          <div class="project-tech"><span>Java</span><span>HTML/CSS</span><span>JavaScript</span><span>Backend</span>
+          </div>
+          <div class="project-company">Health Innovation Pvt Ltd</div>
+        </div>
 
-      <article>
-        <i>08</i>
-        <h3>Angular Web Application Projects</h3>
-        <p>Multiple Angular-based enterprise projects covering responsive UI development, API integration,
-          SSO/authentication flows, bulk data uploads, role-based UI, CSV downloads, form validations, and bug fixing.
-        </p>
-        <em>Angular • TypeScript • JavaScript • HTML/CSS • Bootstrap</em>
-      </article>
+        <div class="project-card reveal-up delay-3">
+          <div class="project-num">08</div>
+          <div class="project-glow"></div>
+          <h3>Angular Enterprise Web Applications</h3>
+          <p>Multiple Angular-based enterprise projects: responsive UI, API integration, SSO/auth flows, bulk data
+            uploads, role-based UI, CSV downloads, form validations, bug fixing and PR code reviews.</p>
+          <div class="project-tech">
+            <span>Angular</span><span>TypeScript</span><span>JavaScript</span><span>HTML/CSS</span><span>Bootstrap</span>
+          </div>
+          <div class="project-company">Multiple Companies</div>
+        </div>
 
+      </div>
     </div>
   </section>
 
   <!-- CONTACT -->
-  <section id="contact" class="contact">
-    <div>
-      <p class="eyebrow">LET'S CONNECT</p>
-      <h2>Have a project or opportunity?</h2>
-      <p>Feel free to contact me for software development opportunities or collaborations.</p>
-    </div>
-    <div class="contact-box">
-      <p>📱 <a href="tel:7397362310">7397362310</a></p>
-      <p>✉️ <a href="mailto:sjaga456@gmail.com">sjaga456@gmail.com</a></p>
-      <p>📍 Coimbatore, Tamil Nadu, India</p>
-      <a class="btn primary" href="mailto:sjaga456@gmail.com">Send Email</a>
+  <section id="contact" class="section contact-section">
+    <div class="section-inner">
+      <div class="contact-glow"></div>
+      <div class="title reveal" style="text-align:center">
+        <p class="eyebrow">LET'S CONNECT</p>
+        <h2>Have a project or <span class="gradient-text">opportunity?</span></h2>
+        <p class="contact-sub">Feel free to reach out for software development opportunities, collaborations or
+          freelance work.</p>
+      </div>
+      <div class="contact-cards reveal-up">
+        <a href="tel:7397362310" class="contact-card">
+          <div class="contact-icon">📱</div>
+          <div>
+            <strong>Phone</strong>
+            <span>7397362310</span>
+          </div>
+        </a>
+        <a href="mailto:sjaga456@gmail.com" class="contact-card">
+          <div class="contact-icon">✉️</div>
+          <div>
+            <strong>Email</strong>
+            <span>sjaga456@gmail.com</span>
+          </div>
+        </a>
+        <div class="contact-card">
+          <div class="contact-icon">📍</div>
+          <div>
+            <strong>Location</strong>
+            <span>Coimbatore, Tamil Nadu, India</span>
+          </div>
+        </div>
+      </div>
+      <div class="contact-cta reveal-up delay-2">
+        <a class="btn primary large" href="mailto:sjaga456@gmail.com">
+          <span>Send Me an Email</span>
+          <svg viewBox="0 0 24 24">
+            <path d="M5 12h14M12 5l7 7-7 7" />
+          </svg>
+        </a>
+      </div>
     </div>
   </section>
 
-  <footer>© <span id="year"></span> Jawahar S • Software Developer</footer>
+  <footer>
+    <div class="footer-inner">
+      <div class="footer-logo"><img src="jk-logo.jpg" alt="JK Logo"> Jawahar S</div>
+      <p>© <span id="year"></span> Jawahar S &nbsp;•&nbsp; Software Developer &nbsp;•&nbsp; Coimbatore, India</p>
+      <p class="footer-sub">Built with HTML, CSS &amp; JavaScript</p>
+    </div>
+  </footer>
+
   <script src="script.js"></script>
 </body>
 
