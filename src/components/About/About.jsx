@@ -44,15 +44,15 @@ export default function About() {
                 </div>
                 <div className="about">
                     <div className="card reveal-left">
-                        <div className="card-icon">👨‍💻</div>
+                        <div className="card-icon">⚡</div>
                         <p>
-                            I am a Software Developer with <strong>6+ years</strong> of experience building business-focused web applications across multiple domains — ERP systems, ID card management platforms, AI-powered testing agents, and enterprise management dashboards.
+                            I am a Senior Software Developer with <strong>6+ years</strong> of hands-on experience designing, architecting, and engineering high-impact web and mobile solutions across diverse domains — ERP platforms, digital ID card systems, AI testing agents, and enterprise management tools.
                         </p>
                         <p>
-                            My expertise spans frontend with <strong>Angular, React & Next.js</strong>; backend with <strong>Node.js, GraphQL, Prisma & Java</strong>; cloud storage via <strong>AWS S3</strong>; and authentication including <strong>SSO, RBAC</strong>, and email/password flows.
+                            My technical toolkit includes <strong>React, Next.js, Angular, and Flutter</strong> on the client side; <strong>Node.js, GraphQL, Prisma, and Java</strong> on the server side; <strong>AWS S3</strong> for scalable cloud storage; and robust enterprise security with <strong>SSO, RBAC</strong>, and token-based authentication flows.
                         </p>
                         <p>
-                            I enjoy working on complex, real-world problems and delivering clean, maintainable, production-ready code that makes a difference.
+                            I excel at translating business requirements into high-performing, resilient applications with intuitive UI/UX, clean maintainable code, and high operational reliability.
                         </p>
                     </div>
 
@@ -60,20 +60,20 @@ export default function About() {
                         <div className="stat-card reveal-up delay-1">
                             <Counter target={6} />
                             <small>+</small>
-                            <span>Years Experience</span>
+                            <span>Years Industry Experience</span>
                         </div>
                         <div className="stat-card reveal-up delay-2">
                             <Counter target={10} />
                             <small>+</small>
-                            <span>Projects Delivered</span>
+                            <span>Production Projects</span>
                         </div>
                         <div className="stat-card reveal-up delay-3">
-                            <strong>Full</strong>
-                            <span>Stack Development</span>
+                            <strong>Full-Stack</strong>
+                            <span>Web & Mobile Architecture</span>
                         </div>
                         <div className="stat-card reveal-up delay-4">
-                            <strong>5+</strong>
-                            <span>Companies Worked</span>
+                            <strong>5</strong>
+                            <span>Tech Organizations</span>
                         </div>
                     </div>
                 </div>

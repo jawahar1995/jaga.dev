@@ -5,24 +5,24 @@
 }
 
 .project-card {
-    background: linear-gradient(135deg, #0a1c2e, #0c2132);
+    background: linear-gradient(135deg, rgba(10, 28, 46, 0.95), rgba(12, 33, 50, 0.95));
     border: 1px solid #173a55;
     border-radius: 20px;
     padding: 30px;
     position: relative;
     overflow: hidden;
-    transition: border-color 0.3s, transform 0.3s, box-shadow 0.3s;
+    transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
     cursor: default;
 }
 
 .project-card:hover {
-    border-color: #2077a8;
+    border-color: #20bfff;
     transform: translateY(-6px);
-    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.4);
+    box-shadow: 0 16px 45px rgba(32, 191, 255, 0.16), 0 20px 60px rgba(0, 0, 0, 0.5);
 }
 
 .project-card.featured {
-    border-color: rgba(32, 191, 255, 0.25);
+    border-color: rgba(32, 191, 255, 0.35);
 }
 
 .project-card.featured::before {

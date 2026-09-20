@@ -46,16 +46,20 @@
 }
 
 .timeline-card {
-    background: linear-gradient(135deg, #0b1e30, #0d2438);
+    background: linear-gradient(135deg, rgba(11, 30, 48, 0.95), rgba(13, 36, 56, 0.95));
     border: 1px solid #173a55;
+    border-left: 3px solid #20bfff;
     border-radius: 18px;
     padding: 28px;
-    transition: border-color 0.3s, transform 0.3s;
+    transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
 }
 
 .timeline-card:hover {
-    border-color: #2077a8;
-    transform: translateX(4px);
+    border-color: #20bfff;
+    border-left: 4px solid #7c4dff;
+    transform: translateX(6px) translateY(-2px);
+    box-shadow: 0 12px 35px rgba(32, 191, 255, 0.18);
 }
 
 .company-header {
