@@ -4,14 +4,14 @@ import './Skills.css';
 export default function Skills() {
     const skillCategories = [
         {
-            title: 'Frontend Development',
+            title: 'Frontend & Mobile Development',
             icon: '🖥️',
             items: [
                 { name: 'HTML5 / CSS3', level: 95 },
                 { name: 'JavaScript / TypeScript', level: 90 },
                 { name: 'Angular', level: 88 },
                 { name: 'React / Next.js', level: 85 },
-                { name: 'TailwindCSS / Bootstrap', level: 78 },
+                { name: 'Flutter (Mobile App)', level: 82 },
             ],
             delay: 'delay-1',
         },
@@ -42,7 +42,7 @@ export default function Skills() {
     ];
 
     const techPills = [
-        'shadcn', 'TanStack Query', 'Redux', 'React Hook Form',
+        'shadcn', 'TanStack Query', 'Redux', 'Flutter', 'React Hook Form',
         'Yup', 'Apollo', 'Keystone', 'Prisma',
         'QR Code', 'Stripe', 'Jira', 'Linear'
     ];

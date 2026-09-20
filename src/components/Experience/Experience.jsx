@@ -10,13 +10,13 @@ export default function Experience() {
             current: true,
             desc: 'Full-stack development using Next.js, React, TypeScript, GraphQL, Prisma, and Keystone CMS. Delivered multiple large-scale products.',
             bullets: [
-                'Built MyStudyId / SmartID — Digital ID card & verification platform for colleges',
+                'Built MyStudyId / SmartID — Web & Flutter Mobile App for digital Student & Staff ID card display, QR Code scanning, dynamic Portrait/Landscape orientation support & college verification platform',
                 'Developed GreenLight — AI-powered web application testing platform',
                 'Contributed to SmartPipe — ERP & member management system',
                 'Worked on MakerBay ERP — Batch bundle & digital ID card system with Stripe',
                 'Implemented SSO, RBAC (Admin/Owner/Member/Viewer), S3 image storage & bulk uploads'
             ],
-            tags: ['Next.js', 'React', 'TypeScript', 'GraphQL', 'Prisma', 'S3', 'SSO'],
+            tags: ['Next.js', 'React', 'Flutter', 'TypeScript', 'GraphQL', 'Prisma', 'S3', 'SSO'],
             animation: 'reveal-left'
         },
         {
@@ -47,6 +47,21 @@ export default function Experience() {
             animation: 'reveal-left'
         },
         {
+            period: 'Previous Role',
+            title: 'Software Developer',
+            company: '🏢 Tenfinish Private Limited',
+            current: false,
+            desc: 'Delivered web applications across e-commerce, fitness management, cloud storage integration, and custom client solutions.',
+            bullets: [
+                'E-Commerce Application: Developed product, customer, and order management modules with end-to-end API integration and responsive UI',
+                'Gym Projects: Built gym & fitness management applications with member/user management, responsive interfaces, and database integration',
+                'Freelancing — Multiple Websites: Developed and maintained multiple responsive client websites with frontend UI and custom API integrations',
+                'S3 Gold Project: Implemented Amazon S3 file/image storage, upload & retrieval functionality with seamless full-stack integration'
+            ],
+            tags: ['React', 'JavaScript', 'Amazon S3', 'REST APIs', 'HTML/CSS', 'Node.js'],
+            animation: 'reveal-right'
+        },
+        {
             period: 'Early Career',
             title: 'Software Developer',
             company: '🏢 Health Innovation Private Limited',
@@ -54,16 +69,6 @@ export default function Experience() {
             desc: 'Built the Glosys Project — a health innovation platform with Java backend and web frontend, covering forms, business logic and validations.',
             bullets: [],
             tags: ['Java', 'HTML/CSS', 'JavaScript', 'Backend'],
-            animation: 'reveal-right'
-        },
-        {
-            period: 'Early Career',
-            title: 'Technical Apprentice — Quality Department',
-            company: '🏭 Ford Sparket Manufacturing',
-            current: false,
-            desc: 'Gained foundational experience in quality assurance processes, technical documentation and production-line workflows within a manufacturing environment.',
-            bullets: [],
-            tags: ['Quality Assurance', 'Technical Documentation'],
             animation: 'reveal-left'
         }
     ];

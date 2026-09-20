@@ -1,6 +1,6 @@
 import React from 'react';
-import ParticlesBackground from './ParticlesBackground';
-import { useTypewriter } from '../hooks/useTypewriter';
+import ParticlesBackground from '../ParticlesBackground';
+import { useTypewriter } from '../../hooks/useTypewriter';
 import './Hero.css';
 
 export default function Hero() {

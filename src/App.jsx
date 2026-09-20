@@ -1,6 +1,5 @@
 import React from 'react';
 import Preloader from './components/Preloader';
-import CustomCursor from './components/CustomCursor';
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
 import About from './components/About';
@@ -17,7 +16,6 @@ export default function App() {
   return (
     <>
       <Preloader />
-      <CustomCursor />
       <Navbar />
       <main>
         <Hero />

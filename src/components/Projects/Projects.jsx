@@ -5,9 +5,9 @@ export default function Projects() {
     const projectList = [
         {
             num: '01',
-            title: 'MyStudyId — Smart Digital ID & Verification',
-            desc: 'Full-stack digital ID card platform for colleges & organizations. SSO authentication, college & user management, ID card template customization, QR verification, bulk uploads, S3 storage, and role-based access control (Admin/Owner/Member/Viewer).',
-            tech: ['Next.js', 'React', 'TypeScript', 'GraphQL', 'Prisma', 'Keystone', 'S3', 'SSO'],
+            title: 'MyStudyId — Smart Digital ID & Verification (Web & Mobile)',
+            desc: 'Digital ID card platform & Flutter mobile application for colleges & organizations. Features Student & Staff ID card display, QR code scanning, dynamic Portrait and Landscape orientation views, SSO authentication, ID card template customization, bulk uploads, S3 storage, and role-based access control (Admin/Owner/Member/Viewer).',
+            tech: ['Next.js', 'React', 'Flutter', 'TypeScript', 'GraphQL', 'Prisma', 'Keystone', 'S3', 'SSO', 'QR Code'],
             company: 'Bluebasket Labs Pvt Ltd',
             featured: true,
             delay: 'delay-1'
@@ -74,6 +74,24 @@ export default function Projects() {
             company: 'Multiple Companies',
             featured: false,
             delay: 'delay-3'
+        },
+        {
+            num: '09',
+            title: 'E-Commerce & Gym Management Portals',
+            desc: 'E-commerce platform with product, customer & order management alongside Gym/fitness management applications with member management, responsive web interfaces, and API/database integrations.',
+            tech: ['React', 'JavaScript', 'HTML/CSS', 'REST APIs', 'Node.js'],
+            company: 'Tenfinish Private Limited',
+            featured: false,
+            delay: 'delay-1'
+        },
+        {
+            num: '10',
+            title: 'S3 Gold Project & Client Websites',
+            desc: 'Amazon S3 file and image storage solution with upload & retrieval functionality. Built and maintained multiple responsive client websites with custom frontend UI and API integrations.',
+            tech: ['Amazon S3', 'JavaScript', 'React', 'REST APIs', 'HTML/CSS'],
+            company: 'Tenfinish Private Limited',
+            featured: false,
+            delay: 'delay-2'
         }
     ];
 
