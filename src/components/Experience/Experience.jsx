@@ -4,7 +4,7 @@ import './Experience.css';
 export default function Experience() {
     const experiences = [
         {
-            period: 'May 2025 — June 2026',
+            period: 'May 2025 — Present',
             title: 'Software Engineer',
             company: '🏢 Bluebasket Labs Pvt Ltd',
             current: true,
